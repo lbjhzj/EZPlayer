@@ -245,7 +245,7 @@ open class EZPlayer: NSObject {
     open private(set) var fullScreenViewController : EZPlayerFullScreenViewController?
 
     /// 视频控制器视图
-    fileprivate var playerView: EZPlayerView?
+    open var playerView: EZPlayerView?
     open var view: UIView{
         if self.playerView == nil{
             self.playerView = EZPlayerView(controlView: self.controlView)
