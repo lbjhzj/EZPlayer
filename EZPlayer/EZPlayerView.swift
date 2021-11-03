@@ -125,7 +125,7 @@ extension EZPlayerView: UIGestureRecognizerDelegate {
 extension EZPlayerView {
     private func configGesture(){
         self.panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.panDirection(_:)))
-        self.addGestureRecognizer(self.panGesture)
+//        self.addGestureRecognizer(self.panGesture)
         self.panGesture.delegate = self
 
         self.singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.singleTapGestureTapped(_:)))
