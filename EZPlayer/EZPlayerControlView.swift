@@ -61,10 +61,11 @@ open class EZPlayerControlView: UIView{
         super.awakeFromNib()
 
         self.timeSlider.value = 0
+
         self.progressView.progress = 0
-        self.progressView.progressTintColor = UIColor.lightGray
-        self.progressView.trackTintColor = UIColor.clear
-        self.progressView.backgroundColor = UIColor.clear
+        self.progressView.progressTintColor = UIColor.init(red: 139.0/255.0, green: 89.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        self.progressView.trackTintColor = UIColor.white
+//        self.progressView.backgroundColor = UIColor.clear
         self.videoshotPreview.isHidden = true
 
         self.audioSubtitleCCButtonWidthConstraint.constant = 0
@@ -433,9 +434,9 @@ extension EZPlayerControlView: EZPlayerCustom {
 
     public func player(_ player: EZPlayer, bufferDurationDidChange bufferDuration: TimeInterval, totalDuration: TimeInterval) {
         if totalDuration.isNaN || bufferDuration.isNaN || totalDuration == 0 || bufferDuration == 0{
-            self.progressView.progress = 0
+//            self.progressView.progress = 0
         }else{
-            self.progressView.progress = Float(bufferDuration/totalDuration)
+//            self.progressView.progress = Float(bufferDuration/totalDuration)
         }
     }
 
@@ -449,6 +450,7 @@ extension EZPlayerControlView: EZPlayerCustom {
         self.titleLabel.text = player.contentItem?.title ?? player.playerasset?.title
         if !self.isProgressSliderSliding {
             self.timeSlider.value = Float(currentTime)
+            self.progressView.progress = Float(currentTime)/Float(duration)
             self.timeLabel.text = duration.isNaN ? "Live" : EZPlayerUtils.formatTime(position: currentTime, duration: duration)
 
         }

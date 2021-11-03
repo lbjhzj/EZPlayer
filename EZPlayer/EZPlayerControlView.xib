@@ -128,10 +128,8 @@
                         </view>
                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hQE-RR-3tG">
                             <rect key="frame" x="0.0" y="5" width="640" height="4"/>
-                            <color key="progressTintColor" red="1" green="1" blue="0.1239963108" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </progressView>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zy8-jJ-r8D">
+                        <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zy8-jJ-r8D">
                             <rect key="frame" x="-2" y="0.0" width="644" height="13"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="12" id="HOQ-Xa-HnB"/>
