@@ -199,7 +199,7 @@ extension EZPlayerView {
             return
         }
         if let gestureRecognizer =  self.controlView as? EZPlayerGestureRecognizer{
-            gestureRecognizer.player(player, singleTapGestureTapped: sender as! UITapGestureRecognizer )
+            gestureRecognizer.player(player, doubleTapGestureTapped: sender as! UITapGestureRecognizer )
         }
         NotificationCenter.default.post(name: .EZPlayerTapGestureRecognizer, object: player, userInfo: [Notification.Key.EZPlayerNumberOfTaps: 1, Notification.Key.EZPlayerTapGestureRecognizer: sender as! UITapGestureRecognizer])
 

@@ -64,14 +64,14 @@ open class EZPlayerControlView: UIView{
 
         self.progressView.progress = 0
         self.progressView.progressTintColor = UIColor.init(red: 139.0/255.0, green: 89.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-        self.progressView.trackTintColor = UIColor.white
+        self.progressView.trackTintColor = UIColor.white.withAlphaComponent(0.26)
 //        self.progressView.backgroundColor = UIColor.clear
         self.videoshotPreview.isHidden = true
 
         self.audioSubtitleCCButtonWidthConstraint.constant = 0
         self.pipButtonWidthConstraint.constant = 0
 
-        self.autohidedControlViews = [self.toolBarContainer,self.safeAreaBottomView]
+        self.autohidedControlViews = []
         //        self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGestureTapped(_:)))
         //        self.tapGesture.delegate = self
         //        self.addGestureRecognizer(self.tapGesture)
