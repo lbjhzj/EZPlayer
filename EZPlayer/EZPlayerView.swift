@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class EZPlayerView: UIView {
+public class EZPlayerView: UIView {
     //播放器属性
     weak private var player: EZPlayer?
 
@@ -26,7 +26,7 @@ class EZPlayerView: UIView {
         }
     }
 
-    override class var layerClass: AnyClass {
+    public override class var layerClass: AnyClass {
         return AVPlayerLayer.self
     }
 
@@ -57,7 +57,7 @@ class EZPlayerView: UIView {
     }
 
 
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         if let controlView = self.controlView {
             controlView.frame = self.bounds
