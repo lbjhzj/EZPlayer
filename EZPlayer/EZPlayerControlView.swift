@@ -59,18 +59,18 @@ open class EZPlayerControlView: UIView{
     }
     override open func awakeFromNib() {
         super.awakeFromNib()
+
         self.timeSlider.value = 0
         self.progressView.progress = 0
         self.progressView.progressTintColor = UIColor.lightGray
         self.progressView.trackTintColor = UIColor.clear
         self.progressView.backgroundColor = UIColor.clear
-
         self.videoshotPreview.isHidden = true
 
         self.audioSubtitleCCButtonWidthConstraint.constant = 0
         self.pipButtonWidthConstraint.constant = 0
 
-        self.autohidedControlViews = [self.navBarContainer,self.toolBarContainer,self.safeAreaBottomView]
+        self.autohidedControlViews = [self.toolBarContainer,self.safeAreaBottomView]
         //        self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGestureTapped(_:)))
         //        self.tapGesture.delegate = self
         //        self.addGestureRecognizer(self.tapGesture)
